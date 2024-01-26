@@ -1,0 +1,75 @@
+body {
+    
+    background-image: url("imgs/blurryBackground.jpg");
+    background-repeat: repeat-y;
+    background-color:#5d240a4d;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    object-fit:none;
+  }
+
+
+.img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    position: relative; 
+    left: 50;
+    border-radius: 20px ;
+
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    min-height: 200px;
+    max-width: 350px;
+    align-items: center;
+    /* left: 50; 
+    column-gap: 140px; */
+    background-color: #5d240a5f;
+
+    border-radius: 30px ;
+
+}
+
+label{
+    padding-left: 20px;
+    margin-top: 100px;
+}
+
+.form-btn{
+    /* padding-left: 150px; */
+    padding-top: 50px;
+    padding-left: 130px;
+    margin: 10px;
+ }
+
+.container .box {
+    
+    padding: 20px;
+    box-sizing: content-box;
+    /* left: 120; */
+    position: relative;
+    border-radius: 30px ;
+
+    
+}
+
+input{
+    height: 30px;
+    outline: none;
+    border: none;
+    align-content: center;
+    padding-left: 10px;
+    border-radius: 30px ;
+    margin-bottom: 30px;
+    color: #441905e0;
+    
+}

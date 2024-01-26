@@ -1,0 +1,268 @@
+body {
+    
+    background-image: url("imgs/blurryBackground.jpg");
+    background-repeat: repeat-y;
+    background-color:#5d240a4d;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    object-fit:none;
+    /* background-repeat: repeat-y; */
+
+  }
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    left: 50;
+    column-gap: 140px;
+    /* background-color: #047baa3e; */
+    border-radius: 30px ;
+
+}
+.container .box {
+    left: 50;
+    padding: 15px;
+    box-sizing: content-box;
+    background-color: #5d240a5f;
+    /* left: 120; */
+    position: relative; 
+    border-radius: 30px ;
+
+
+    
+}
+h1 {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding: 5px;
+  color:#552813cd
+
+}
+
+h2 {
+  /* margin-top: 48px; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  color:#552813cd;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: underline; 
+}
+
+h4 {
+  /* margin-top: 48px; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  color:#552813cd;
+  font-size: 25px;
+}
+
+.img {
+    width:250px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px ;
+
+}
+
+.img:hover{
+    transform: scale(1.5);}
+
+
+/* Dropdown Button */
+.searchbtn {
+    background-image: url('imgs/search_icon_.png');
+    background-position: 1px 2px; 
+    background-repeat: no-repeat;
+    background-color: #6c3217cd;
+    /* color: white; */
+    padding: 20px;
+    width: 20px;
+    /* font-size: 16px; */
+    border:2px solid #58250dcd;
+    border-radius: 25px ;
+    cursor: pointer;
+  }
+
+  
+  /* Dropdown button on hover & focus  */
+   .searchbtn:hover{
+    background-color: #783d21cd;
+
+  }
+
+  
+  /* The search field */
+  #search_text {
+    box-sizing: content-box;
+    color: #6c3217cd;
+    /* background-position: 14px 12px;
+    background-repeat: no-repeat; */
+    font-size: 16px;
+    width: 60px; 
+    padding: 14px 20px 12px 20px;
+    border: none;
+    border-bottom: 1px solid #6c3217cd;
+  }
+  
+  /* The search field when it gets focus/clicked on */
+  #search_text:focus {outline: 3px solid #ddd;}
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    /* padding: 20px; */
+    width: 20px;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position:absolute;
+    width: 100px;
+    background-color: #f6f6f6;
+    /* min-width: 230px; */
+    border: 1px solid #ddd;
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #6c3217cd;
+    padding: 12px ;
+    text-decoration: none;
+    display: block;
+  }
+
+  .sub-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .sub-dropdown-content {
+    display: none;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    position:relative;
+    left: 50;
+    column-count: 3;
+    max-height:150px;
+  }
+
+  .sub-dropdown-content b {
+    color: #6c3217cd;
+    padding: 5px;
+    text-decoration: none;
+    display:block;
+  }
+
+
+
+ 
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  .sub-dropdown-content b:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content{display: block;}
+  .dropdown-content a:hover .sub-dropdown-content{display:block;}
+
+  /* .a:hover .b{display: block;} */
+  /* .searchbtn:hover  .dropdown-content{display: block;} */
+
+  /* .dropdown:hover .searchbtn {background-color: #288fb7; display: block;} */
+  .slidecontainer {
+    display: none;
+    width: 350px;
+    position: relative;
+    background-color: #8c411ecb;
+    margin-left: 50;
+    /* margin-right: 50; */
+    height: 25px;
+    border-radius: 20px;
+    z-index: 1;
+    align-items: center;
+
+  }
+
+
+  .slidecontainer z{
+    /* margin-right: 50; */
+    bottom:20;
+    /* left : 5; */
+    font-size: 15px;
+
+    position: relative;
+    align-items: left;
+    right:40;
+    cursor: pointer;
+    text-decoration: underline; 
+  }
+  
+  /* The slider itself */
+  /* .slider {
+    display: none;
+    appearance: none;
+    width: 100%; 
+    height: 15px; 
+    background: #6c0000; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    border-radius: 5px;
+  } */
+  
+ 
+  .slider{
+    appearance: none;
+    display: none;
+    background-color: #632b11;
+    /* border: 1px solid #7f0e0e; */
+    position:relative;
+    margin:10;
+    /* left: 2; */
+    top: 5;
+    height: 15px;
+    width: 330px;
+    border-radius: 20px;
+    outline: none;
+    z-index: 1;
+
+  }
+
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+ 
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border-radius: 50%; 
+    width: 23px; /* Set a specific slider handle width */
+    height: 24px; /* Slider handle height */
+    background: #b58771; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    z-index: 2;
+  }
+  
+
+  .dropdown-content a:hover .slidecontainer{display:block;}
+  .dropdown-content a:hover .slider{display:block;}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Admin Home
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    /* #form2 {
+        display: none;
+    }
+    #form1 {
+        display: block;
+    } */
+    .F {
+        display: none;
+    }
+</style>
+
+<body>
+    <nav>
+        <label class="logo"> Car Rental System</label>
+        <ul>
+            <form id="admin_id" method="post" action="Admin.php"></form>
+            <div class="dropdown">
+                <!-- <button onclick="myFunction()" -->
+                <button class="searchbtn"></button>
+                <div id="search_options" class="dropdown-content">
+                    <a>Customers
+                        <b class="sub-dropdown">
+                            <div class="sub-dropdown-content">
+                                <b onclick="toggleVisibility('name_form')">Name</b>
+                                <b onclick="toggleVisibility('id_form')">ID</b>
+                                <b onclick="toggleVisibility('email_form')">Email</b>
+                                <b onclick="toggleVisibility('address_form')">Address</b>
+                                <b onclick="toggleVisibility('phone_form')">Phone</b>
+                            </div>
+                        </b>
+                    </a>
+                    <a>Cars
+                        <b class="sub-dropdown">
+                            <div class="sub-dropdown-content">
+                                <b onclick="toggleVisibility('plate_form')">Plate ID</b>
+                                <b onclick="toggleVisibility('model_form')">Model</b>
+                                <b onclick="toggleVisibility('brand_form')">Brand</b>
+                                <b onclick="toggleVisibility('location_form')">Location</b>
+                                <b onclick="toggleVisibility('price_form')">Price</b>
+                                <b onclick="toggleVisibility('status_form')">Status</b>
+                            </div>
+                        </b>
+                    </a>
+                    <a>Reservation
+                        <b class="sub-dropdown">
+                            <div class="sub-dropdown-content">
+                                <b onclick="toggleVisibility('day_form')">Day</b>
+                                <b onclick="toggleVisibility('interval_form')">Interval</b>
+                            </div>
+                        </b>
+                    </a>
+                    <a onclick="toggleVisibility('payments')">Payments</a>
+                    <a onclick="toggleVisibility('status_day')">Status By Day</a>
+
+                </div>
+            </div>
+            <li><a href="#" onclick="toggleVisibility('form1')">Add</a></li>
+            <li><a href="#" onclick="toggleVisibility('form2')">update</a></li>
+        </ul>
+    </nav>
+    <div class="F" id="form1">
+        <h1> Add car</h1>
+        <form class="add" action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="plate" placeholder="Plate ID" name="plate">
+            </div>
+            <div class="input_box">
+                <input type="text" id="Car_year" placeholder=" Car Year" name="year">
+            </div>
+            <div class="input_box">
+                <input type="text" id="model" placeholder="Car Model" name="model">
+            </div>
+            <div class="input_box">
+                <input type="text" id="location" placeholder="Car Location" name="location">
+            </div>
+            <div class="input_box">
+                <input type="text" id="brand" placeholder="Car Brand" name="brand">
+            </div>
+            <div class="input_box">
+                <input type="text" id="status" placeholder="Car Status " name="status">
+            </div>
+            <div class="input_box">
+                <input type="text" id="price" placeholder="Car Price " name="price">
+            </div>
+            <div class="input_box">
+                <input type="text" id="image" placeholder="Car Image path" name="image">
+            </div>
+            <div>
+                <input class="btn" type="submit" value="ADD" name="add" onclick=" return validate();">
+            </div>
+        </form>
+    </div>
+    <div class="F" id="name_form">
+        <h1> Search by Name</h1>
+        <form class="id" action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="customer_fname" name="customer_fname" placeholder="Enter first name" required>
+            </div>
+            <div class="input_box">
+                <input type="text" id="customer_lname" name="customer_lname" placeholder="Enter last name" required>
+            </div>
+            <div>
+                <input class="btn" type="submit" id="displayName" name="displayByName" value="VIEW" >
+            </div>
+        </form>
+    </div>
+    <div class="F" id="id_form">
+        <h1> Search by ID</h1>
+        <form  action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="customer_id" name="customer_id" placeholder="Enter Customer ID" required>
+            </div>
+            <div>
+                <input class="btn" type="submit" id="displayId" name="displayByid" value="View" >
+            </div>
+        </form>
+    </div>
+    <div class="F" id="address_form">
+        <h1> Search by Address</h1>
+        <form  action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="customer_address" name="customer_address" placeholder="Enter Customer Address" required>
+            </div>
+            <div>
+                <button class="btn" name="displayByAddress" id="displayAddress">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="email_form">
+        <h1> Search by Email</h1>
+        <form  action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="customer_email" name="customer_email" placeholder="Enter Customer Email" required>
+            </div>
+            <div>
+                <button class="btn" name="displayByEmail" id="displayEmail">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="phone_form">
+        <h1> Search by Phone</h1>
+        <form  action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="customer_phone" name="customer_phone" placeholder="Enter Customer Phone" required>
+            </div>
+            <div>
+                <button class="btn" name="displayByPhone" id="displayPhone">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="plate_form">
+        <h1> Search by Plate ID</h1>
+        <form action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="car_plate" name="car_plate" placeholder="Enter Car Plate" required>
+            </div>
+            <div>
+                <button class="btn" id="displayByPlate" name="displayByPlate">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="location_form">
+        <h1> Search by Location</h1>
+        <form action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="car_location" name="car_location" placeholder="Enter Car Location" required>
+            </div>
+            <div>
+                <button class="btn" id="displayLocation" name="displayByLocation">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="model_form">
+        <h1> Search by Model Year</h1>
+        <form action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="car_model" name="car_model" placeholder="Enter Car Model Year" required>
+            </div>
+            <div>
+                <button class="btn" id="displayModel" name="displayByModel">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="brand_form">
+        <h1> Search by Brand</h1>
+        <form  action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="car_brand" name="car_brand" placeholder="Enter Car Brand" required>
+            </div>
+            <div>
+                <button class="btn" id="displayBrand" name="displayByBrand">View</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="F" id="status_form">
+        <h1> Search by Status</h1>
+        <form  action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="car_status" name="car_status" placeholder="Enter Car Status" required>
+            </div>
+            <div>
+                <button class="btn" id="displayStatus" name="displayByStatus">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="price_form">
+        <h1> Search by Price</h1>
+        <form action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="car_price" name="car_price" placeholder="Enter Car Price" required>
+            </div>
+            <div>
+                <button class="btn" id="displayPrice" name="displayByPrice">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="day_form">
+        <h1> Search by Day</h1>
+        <form  action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="date" id="reserveday" name="reserveday" placeholder="Enter a Day to search for" required>
+            </div>
+            <div>
+                <button class="btn" id="reservationDay" name="reservationDay">View</button>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="interval_form">
+        <h1> Search by Interval</h1>
+        <form class="day" action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="date" id="start_date" name="start_date" placeholder="Enter Start Date" required>
+            </div>
+            <div class="input_box">
+                <input type="date" id="end_date" name="end_date" placeholder="Enter End Date" required>
+            </div>
+            <div>
+                <button class="btn" id="intervalButton" name="intervalButton">View</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="F" id="form2">
+        <h1> Update Car Status</h1>
+        <form class="update" action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="text" id="plate_id" placeholder=" Plate ID to update status" name="plate_id" required>
+            </div>
+            <div class="input_box">
+                <input type="text" id="updated_status" placeholder=" Updated Car Status " name="updated_status" required>
+            </div>
+            <div>
+                <input class="btn" onclick=" return check();" type="submit" value="Update" name="update">
+            </div>
+        </form>
+    </div>
+    <div class="F" id="payments">
+        <h1> Search Payments by Period</h1>
+        <form action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="date" id="startPayment" name="startPayment" placeholder="Enter Start Date" required>
+            </div>
+            <div class="input_box">
+                <input type="date" id="endPayment" name="endPayment" placeholder="Enter End Date" required>
+            </div>
+            <div>
+                <input class="btn" type="submit" id="DailyPayments" name="DailyPayments" value="VIEW" >
+            </div>
+        </form>
+    </div>
+
+    <div class="F" id="status_day">
+        <h1> Status of car by day</h1>
+        <form  action="Admin.php" method="post">
+            <div class="input_box">
+                <input type="date" id="statusday" name="statusday" placeholder="Enter a Day to search for" required>
+            </div>
+            <div>
+                <button class="btn" id="statusdayy" name="statusdayy">View</button>
+            </div>
+        </form>
+    </div>
+    
+    <script type="text/javascript">
+        function toggleVisibility(id) {
+            var forms = document.querySelectorAll('.F');
+            forms.forEach(form => {
+                if (form.id === id) {
+                    form.style.display = 'block';
+                } else {
+                    form.style.display = 'none';
+                }
+            });
+        }
+        function check() {
+            var plate_id = document.getElementById("plate_id");
+            var status = document.getElementById("updated_status");
+            if (plate_id.value == "" || status.value == "") {
+                alert("No blank values allowed ");
+                return;
+            }
+
+        }
+        function validate() {
+            var plate_id = document.getElementById("plate");
+            var price = document.getElementById("price");
+            var location = document.getElementById("location");
+            var status = document.getElementById("status");
+            var image = document.getElementById("image");
+            var brand = document.getElementById("brand");
+            var year = document.getElementById("Car_year");
+            var model = document.getElementById("model");
+            if (plate_id.value == "") {
+                alert("Please enter Car Plate");
+                return false;
+            }
+            if (brand.value == "") {
+                alert("Please enter Car Brand");
+                return false;
+            }
+            if (year.value == "") {
+                alert("Please enter Car Year");
+                return false;
+            }
+            if (price.value == "") {
+                alert("Please enter Car Price");
+                return false;
+            }
+            if (location.value == "") {
+                alert("Please confirm Location");
+                return false;
+            }
+            if (model.value == "") {
+                alert("Please enter Car Model");
+                return false;
+            }
+            if (image.value == "") {
+                alert("Please enter Image path");
+                return false;
+            }
+            if (status.value == "") {
+                alert("Please enter Car Status ");
+                return false;
+            }
+            return true;
+
+        }
+
+
+        //     function user(){
+        //     var form = document.getElementById("admin_id");
+        //     form.action = "searchByCustomer.php";
+        //     form.submit();
+        // }
+
+
+    </script>
+</body>
+
+</html>

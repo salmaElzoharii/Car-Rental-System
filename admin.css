@@ -1,0 +1,57 @@
+body{
+    background-image: url("imgs/blurryBackground.jpg");
+    background-repeat: repeat-y;
+    background-color:#5d240a4d;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    object-fit:none;
+    /* background-repeat: repeat-y; */
+
+}
+
+table{
+    /* background-color:#9c6c58ac; */
+    /* border: 2px solid #412011f7; */
+    background-color:#9c6c5800;
+    border-radius: 20px;
+    align-items: center;
+    left:50;
+    width:fit-content;
+}
+    th{
+        background-color:#5c2e18f7;
+        border: 2px solid #5c2e18f7;
+        border-radius: 20px;
+        align-items: center;
+        left:50;
+        color: #ecb096ac;
+        width:fit-content;
+        
+    }
+    td {
+        background-color:#ca947cac;
+        /* border: 2px solid #ca947cac; */
+        border-radius: 10px;
+        align-items: center;
+        left:50px;
+        color: #412011f7;
+        width:fit-content;
+        height: 25px;
+        /* margin-right: 30px; */
+        text-align: center;        
+
+    }
+
+    h1 {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        padding: 5px;
+        color:#552813cd
+      
+      }

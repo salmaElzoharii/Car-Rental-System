@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Home
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    #form2 {
+        display: none;
+    }
+
+    #form1 {
+        display: block;
+    }
+</style>
+
+<body>
+    <nav>
+        <label class="logo"> Car Rental System</label>
+        <ul>
+            <li><a href="#" onclick="toggleVisibility('form1')">User Login</a></li>
+            <li><a href="#" onclick="toggleVisibility('form2')">Admin Login</a></li>
+        </ul>
+    </nav>
+    <div class="F" id="form1">
+        <h1> User Login</h1>
+        <form class="user_login" action="login.php" method="post" >
+            <div class="input_box">
+                <input type="email" id="email" placeholder="Email" name="email" autocomplete="off">
+            </div>
+            <div class="input_box">
+                <input type="password" id="pass" placeholder="Password" name="password" autocomplete="off">
+            </div>
+            <div>
+                <input class="btn" onclick="validate()" type="submit" value="Login" name="u_login" >
+            </div>
+            <div class="Register">
+                <p>Don't have an account? <a href="Register.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="F" id="form2">
+        <h1> Admin Login</h1>
+        <form class="admin_login" action="login.php" method="post">
+            <div class="input_box">
+                <input type="email" id="email-admin" placeholder="Email" name="email2" autocomplete="off">
+            </div>
+            <div class="input_box">
+                <input type="password" id="pass-admin" placeholder="Password" name="password2" autocomplete="off">
+            </div>
+            <div>
+                <input class="btn" onclick="check()" type="submit" value="Login" name="a_login">
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function toggleVisibility(id) {
+            var forms = document.querySelectorAll('.F');
+            forms.forEach(form => {
+                if (form.id === id) {
+                    form.style.display = 'block';
+                } else {
+                    form.style.display = 'none';
+                }
+            });
+
+        }
+
+        function validate() {
+            var email = document.getElementById("email");
+            var password = document.getElementById("pass");
+            if (email.value == "" || password.value == "") {
+                alert("No blank values allowed ");
+                return;
+            }
+        }
+
+        function check() {
+            var email = document.getElementById("email-admin");
+            var password = document.getElementById("pass-admin");
+            if (email.value == "" || password.value == "") {
+                alert("No blank values allowed ");
+                return ; 
+        }
+
+    }
+
+
+    </script>
+</body>
+
+</html>

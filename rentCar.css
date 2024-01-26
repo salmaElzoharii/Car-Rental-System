@@ -1,0 +1,130 @@
+body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+
+    background-image: url("imgs/blurryBackground.jpg");
+    background-repeat: repeat-y;
+background-color:#5d240a4d;
+
+display: flex;
+flex-direction: column;
+margin: 0;
+padding: 0;
+object-fit:none;
+align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding: 5px;
+    color:#552813cd
+
+}
+
+
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    /* border-radius: 25px; */
+}
+
+
+.col-50 {
+    -ms-flex: 50%;
+    /* IE10 */
+    flex: 50%;
+    padding: 0 16px;
+    width: 300px;
+    border-radius: 30px;
+    align-items: center;
+}
+
+
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+    background-color: #e1a8955f;
+    border-radius: 25px;
+    width : 200px;
+    margin-left: 20px;
+    padding-left: 30px;
+}
+
+
+
+.content form .user-details{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 10px 0 10px 0;
+}
+
+
+form .button input{
+width: 130px;
+height: 50px;
+border-radius: 5px;
+border: none;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+letter-spacing: 1px;
+cursor: pointer;
+transition: all 0.3s ease;
+background: #552813;
+/* color:#a9603e; */
+}
+
+label{
+color: #f4ebe8cd;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    left: 50;
+    column-gap: 140px;
+    /* background-color: #047baa3e; */
+    border-radius: 30px ;
+    background-color: #5528138e;
+    border-color: transparent;
+    width: fit-content;
+}

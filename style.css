@@ -1,0 +1,217 @@
+body{
+    background-image: url(imgs/blurryBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif
+}
+.F{
+    font-size: 25px;
+    text-align: center;   
+}
+.F h1{
+    font-size: 25px;
+    color: #58250dcd;
+}
+.F .input_box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input_box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border:  2px solid ;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 20px;
+    border-color: #58250dcd;
+}
+/* .input_box input ::placeholder{
+color: white;
+} */
+/* .input_box i{
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    transform: translateY(-50%);
+    font-size: 20px;
+} */
+.F .btn{
+    width: 100%;
+    height: 45px;
+    background: #58250dcd;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+}
+.F .Register{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    color:#552813cd;
+}
+.Register p a{
+    text-decoration: none;
+    font-weight: 600;
+    color:#36180acd;
+    text-decoration: underline;
+}
+.Register p a:hover{
+    color:#4b2310cd;
+
+    text-decoration: underline;
+}
+.F{
+    background-color: white;
+    border: 5px solid;
+    border-color: #431c09cd;
+    width: fit-content;
+    margin: 100px auto;
+    margin-right: 40px;
+    padding: 50px;
+    border-radius:40px ; 
+}
+
+nav{
+    background-color: #58250dcd;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color:white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px ;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+
+/* Dropdown Button */
+.searchbtn {
+    background-image: url('imgs/search_icon_.png');
+    background-position: 1px 2px; 
+    background-repeat: no-repeat;
+    background-color: #6c3217cd;
+    /* color: white; */
+    padding: 20px;
+    width: 20px;
+    /* font-size: 16px; */
+    border:2px solid #58250dcd;
+    border-radius: 25px ;
+    cursor: pointer;
+
+  }
+
+  
+  /* Dropdown button on hover & focus  */
+   .searchbtn:hover {
+    background-color: #783d21cd;
+
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    /* padding: 20px; */
+    width: 30px;
+    margin-right: 70px;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position:absolute;
+    width: 120px;
+    background-color: #f6f6f6;
+    /* min-width: 230px; */
+    border: 1px solid #ddd;
+    z-index: 1;
+    border-radius: 20px;
+    
+    /* column-count: 3;
+    column-gap: 2px; */
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #6c3217cd;
+    padding: 12px ;
+    text-decoration: none;
+    display: block;
+    border: 1px solid #dddddd00;
+  }
+
+  
+  .sub-dropdown {
+    position: relative;
+    display: inline-block;
+    left:50;
+  }
+  
+  .sub-dropdown-content {
+    display: none;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    position:relative;
+    left: 100;
+    column-count: 3;
+    width: fit-content;
+    border-radius: 20px;
+    margin-left: 30px;
+
+  }
+
+  .sub-dropdown-content b {
+    color: #6c3217cd;
+    padding: 5px;
+    text-decoration: none;
+    display:block;
+
+  }
+
+
+
+ 
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1;
+    border-radius: 20px;}
+  .sub-dropdown-content b:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content{display: block;}
+  .dropdown-content a:hover .sub-dropdown-content{display:block;}
+
